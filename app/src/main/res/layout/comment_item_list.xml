@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:id="@+id/container_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="20dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/item_avatar_comment"
+            android:background="@drawable/ic_default_avatar"/>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/container_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding ="8dp"
+        android:background="@drawable/comment"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/container_comment"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:id="@+id/item_user_name_comment"
+            android:textFontWeight="900"
+            android:layout_height="wrap_content"
+            android:text="uset1 "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:visibility="visible"
+            android:id="@+id/item_content_comment"
+            android:textFontWeight="100"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/container_comment"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/shadow_top"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_image_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@color/comment" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

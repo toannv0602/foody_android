@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="50dp">
+        <shape>
+            <solid android:color="@color/purple_500" />
+        </shape>
+    </item>
+    <item android:top="-800dp" android:bottom="0dp" android:left="-300dp" android:right="-300dp">
+        <shape>
+            <corners android:radius="700dp" />
+            <solid android:color="@color/purple_500" />
+        </shape>
+    </item>
+</layer-list>

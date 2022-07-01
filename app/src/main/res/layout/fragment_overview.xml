@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.OverviewFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="30dp"-->
+    <!--        android:layout_marginLeft="30dp"-->
+    <!--        android:text="@string/overview_fragment" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_margin="15dp"
+                        app:layout_constraintEnd_toStartOf="@id/component_time"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/component_like"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginBottom="8dp"
+                            android:id="@+id/ic_like"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_baseline_favorite_24" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/totalLike"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_margin="15dp"
+                        android:id="@+id/component_time"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginBottom="8dp"
+                            android:id="@+id/ic_time"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_baseline_access_time_24" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/totalTime"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gà quay"
+
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rdVegan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+
+                        android:text="Vegan"
+                        android:textColor="@color/black"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rdDairy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Dairy Free"
+                        android:textColor="@color/black"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rdHealthy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Healthy"
+                        android:textColor="@color/black"></RadioButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rdVegetarian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Vegetarian"
+                        android:textColor="@color/black"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rdGlutentFree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Glutent Free"
+                        android:textColor="@color/black"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rdCheap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Cheap"
+                        android:textColor="@color/black"></RadioButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="- Mô tả"
+                        android:textColor="@color/gray"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="fjdsfhjdfhdfdoifdiofoidfdfdf"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="- Các bước"
+                        android:textColor="@color/gray"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvStep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="fjdsfhjdfhdfdoifdiofoidfdfdf"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
